@@ -44,7 +44,7 @@ export default function Home() {
 
       Swal.fire({
         title: "Error",
-        html: `<p>Correct the errors:</p>${message}`,
+        html: `<p>Correct the errors:</p> <br> ${message}`,
         icon: "error"
       });
     }
