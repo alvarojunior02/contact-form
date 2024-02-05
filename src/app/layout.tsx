@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Álvaro Júnior - Contact Form",
-  description: "Front-end Practice #2 - Contact Form with simple validation, alerts and responsive layout",
+  description: "Front-end Practice #2 - Contact Form",
 };
 
 export default function RootLayout({
