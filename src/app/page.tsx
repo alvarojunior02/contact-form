@@ -59,17 +59,17 @@ export default function Home() {
 
   return (
     <main className="m-0 p-0 h-screen max-h-screen w-screen flex flex-col items-center justify-center overflow-x-hidden bg-cyan-800">
-      <div className="container w-96 h-20 flex flex-row items-center justify-center bg-white rounded p-4 shadow-xl">
+      <div className="container w-96 h-28 flex flex-row items-center justify-center bg-white rounded p-4 shadow-xl">
         <Image
           className="rounded-full"
           src={ProfileImage}
-          width={50}
-          height={50}
+          width={80}
+          height={80}
           alt="Foto de Perfil"
         />
         <div className="flex flex-col items-start">
-          <p className="ml-2 font-bold">Álvaro Júnior</p>
-          <p className="ml-2">Dev. Full Stack</p>
+          <p className="ml-2 text-lg font-bold">Álvaro Júnior</p>
+          <p className="ml-2 text-sm">Full Stack Developer</p>
         </div>
       </div>
       <div className="container w-96 mt-2 flex flex-col items-center bg-white rounded p-4 shadow-xl">
