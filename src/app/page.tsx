@@ -32,7 +32,7 @@ export default function Home() {
     if (errors.length === 0) {
       Swal.fire({
         title: "Success",
-        html: `<p>Thank you ${name}, for testing.</p><p>This contact form was made just for pratice.</p>`,
+        html: `<p>Thank you ${name}, for testing.</p><p>This contact form was made just for practice.</p>`,
         icon: "success"
       });
       handleResetForm()
