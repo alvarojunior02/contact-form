@@ -15,24 +15,24 @@ export default function Home() {
     const errors = [];
 
     if (name === '') {
-      errors.push("Nome não pode ser vazio.");
+      errors.push("Name can't be empty.");
     } else {
-      if (name.length < 3) errors.push("Nome deve ter pelo menos 3 letras.");
+      if (name.length < 3) errors.push("Name must be have 3 letters or more.");
     }
     if (email === '') {
-      errors.push("E-mail não pode ser vazio.")
+      errors.push("E-mail can't be empty.")
     } else {
       if (!EmailValidator.validate(email)) {
-        errors.push("Informe um e-mail válido.")
+        errors.push("Write a valid email.")
       }
     }
-    if (subject === '') errors.push("Assunto não pode ser vazio.")
-    if (message === '') errors.push("Mensagem não pode ser vazia.")
+    if (subject === '') errors.push("Subject can't be empty.")
+    if (message === '') errors.push("Message can't be empty.")
 
     if (errors.length === 0) {
       Swal.fire({
-        title: "Sucesso",
-        html: `<p>Obrigado ${name} por testar.</p><p>Esse formulário foi feito apenas para praticar.</p>`,
+        title: "Success",
+        html: `<p>Thank you ${name}, for testing.</p><p>This contact form was made just for pratice.</p>`,
         icon: "success"
       });
       handleResetForm()
@@ -43,8 +43,8 @@ export default function Home() {
       })
 
       Swal.fire({
-        title: "Erro",
-        html: `<p>Corriga os erros:</p>${message}`,
+        title: "Error",
+        html: `<p>Correct the errors:</p>${message}`,
         icon: "error"
       });
     }
@@ -74,11 +74,11 @@ export default function Home() {
       </div>
       <div className="container w-96 mt-2 flex flex-col items-center bg-white rounded p-4 shadow-xl">
         <h1 className="font-bold text-lg">
-          Entre em contato:
+          Contact me:
         </h1>
         <div className="w-4/5 py-2 flex flex-col items-center justify-between">
           <div className="p-2 flex flex-col items-start">
-            <label>Nome Completo:</label>
+            <label>Full Name:</label>
             <input
               className="input border border-black rounded w-80 px-2 h-8"
               type="text"
@@ -100,7 +100,7 @@ export default function Home() {
             />
           </div>
           <div className="p-2 flex flex-col items-start">
-            <label>Assunto:</label>
+            <label>Subject:</label>
             <input
               className="input border border-black rounded w-80 px-2 h-8"
               type="text"
@@ -111,7 +111,7 @@ export default function Home() {
             />
           </div>
           <div className="p-2 flex flex-col items-start">
-            <label>Mensagem:</label>
+            <label>Message:</label>
             <textarea
               className="input border border-black rounded w-80 h-40 p-2 resize-none"
               name="message"
